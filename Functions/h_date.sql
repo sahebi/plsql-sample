@@ -1,0 +1,7 @@
+CREATE OR REPLACE FUNCTION SYSTEM.h_date
+   RETURN Varchar2
+   DETERMINISTIC
+   IS
+BEGIN
+  RETURN SubStr(hijri(Sysdate), 1, 10);
+END;
